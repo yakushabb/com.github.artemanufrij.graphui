@@ -1,13 +1,13 @@
 app-id: com.github.artemanufrij.graphui
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '20.08'
+runtime-version: '22.08'
 base: io.elementary.BaseApp
-base-version: 'juno-20.08'
+base-version: 'juno-22.08'
 command: com.github.artemanufrij.graphui
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --filesystem=home
   - --metadata=X-DConf=migrate-path=/com/github/artemanufrij/graphui/
@@ -38,3 +38,5 @@ modules:
         sha256: 8520a394bbd2072aac2db03b1c3fa54d1f32459caafa85c9bc0fa43eadbe1a80
       - type: patch
         path: elementary-theme.patch
+      - type: patch
+        path: appdata.patch

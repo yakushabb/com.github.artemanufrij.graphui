@@ -1,0 +1,41 @@
+From aedba303394fc9a6f4b1a31168c01a1f812e65d9 Mon Sep 17 00:00:00 2001
+From: bbhtt <bbhtt.zn0i8@slmail.me>
+Date: Mon, 11 Sep 2023 10:02:59 +0530
+Subject: [PATCH] Fix appdata
+
+---
+ data/com.github.artemanufrij.graphui.appdata.xml.in | 11 ++---------
+ 1 file changed, 2 insertions(+), 9 deletions(-)
+
+diff --git a/data/com.github.artemanufrij.graphui.appdata.xml.in b/data/com.github.artemanufrij.graphui.appdata.xml.in
+index 148476f..d508701 100644
+--- a/data/com.github.artemanufrij.graphui.appdata.xml.in
++++ b/data/com.github.artemanufrij.graphui.appdata.xml.in
+@@ -8,14 +8,7 @@
+     <summary>Graph Visualization</summary>
+     <description>
+         <p>Graph visualization based on graphviz with included a text editor and a preview area</p>
+-        <p>Supported types:</p>
+-        <ul>
+-            <li>dot</li>
+-            <li>neato</li>
+-            <li>fdp</li>
+-            <li>sfdp</li>
+-            <li>twopi</li>
+-        </ul>
++        <p>Supported types are dot, neato, fdp, sfdp and twopi</p>
+         <p>Shortcuts:</p>
+         <ul>
+             <li>F5: Compile</li>
+@@ -42,7 +35,7 @@
+     <launchable type="desktop-id">com.github.artemanufrij.graphui.desktop</launchable>
+     <screenshots>
+         <screenshot type="default">
+-            <caption>Example</caption>
++            <caption>Example screenshot</caption>
+             <image>https://raw.githubusercontent.com/artemanufrij/graphui/master/screenshots/Screenshot.png</image>
+         </screenshot>
+     </screenshots>
+-- 
+2.41.0
+
