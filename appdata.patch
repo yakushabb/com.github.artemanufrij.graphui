@@ -1,17 +1,25 @@
-From aedba303394fc9a6f4b1a31168c01a1f812e65d9 Mon Sep 17 00:00:00 2001
-From: bbhtt <bbhtt.zn0i8@slmail.me>
-Date: Mon, 11 Sep 2023 10:02:59 +0530
-Subject: [PATCH] Fix appdata
+From f8a5e2d97133405bf5a823c4a00c2d68937f6681 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Thu, 15 Aug 2024 13:55:44 +0300
+Subject: [PATCH] Fix appdata papercuts
 
 ---
- data/com.github.artemanufrij.graphui.appdata.xml.in | 11 ++---------
- 1 file changed, 2 insertions(+), 9 deletions(-)
+ data/com.github.artemanufrij.graphui.appdata.xml.in | 52 +++++++++-------------------------------------------
+ 1 file changed, 9 insertions(+), 43 deletions(-)
 
 diff --git a/data/com.github.artemanufrij.graphui.appdata.xml.in b/data/com.github.artemanufrij.graphui.appdata.xml.in
-index 148476f..d508701 100644
+index 148476f..437ca56 100644
 --- a/data/com.github.artemanufrij.graphui.appdata.xml.in
 +++ b/data/com.github.artemanufrij.graphui.appdata.xml.in
-@@ -8,14 +8,7 @@
+@@ -1,21 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2017 Artem Anufrij <artem.anufrij@live.de> -->
+-<component type="desktop">
++<component type="desktop-application">
+     <id>com.github.artemanufrij.graphui</id>
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>GPL-3.0+</project_license>
+     <name>GraphUI</name>
      <summary>Graph Visualization</summary>
      <description>
          <p>Graph visualization based on graphviz with included a text editor and a preview area</p>
@@ -27,7 +35,15 @@ index 148476f..d508701 100644
          <p>Shortcuts:</p>
          <ul>
              <li>F5: Compile</li>
-@@ -42,7 +35,7 @@
+@@ -35,14 +28,15 @@
+     <developer_name>Artem Anufrij</developer_name>
+     <url type="homepage">https://artemanufrij.github.io</url>
+     <url type="bugtracker">https://github.com/artemanufrij/graphui/issues</url>
++    <url type="vcs-browser">https://github.com/artemanufrij/graphui/</url>
+     <url type="help">https://github.com/artemanufrij/graphui/issues</url>
+     <url type="donation">https://www.paypal.me/ArtemAnufrij</url>
+     <url type="translate">https://github.com/artemanufrij/graphui</url>
+     <update_contact>artem.anufrij@live.de</update_contact>
      <launchable type="desktop-id">com.github.artemanufrij.graphui.desktop</launchable>
      <screenshots>
          <screenshot type="default">
@@ -36,6 +52,73 @@ index 148476f..d508701 100644
              <image>https://raw.githubusercontent.com/artemanufrij/graphui/master/screenshots/Screenshot.png</image>
          </screenshot>
      </screenshots>
--- 
-2.41.0
+@@ -65,7 +59,7 @@
+         </release>
+         <release version="1.0.3" date="2019-07-16">
+             <description>
+-                Small improvements by Nathan Bonnemains
++                <p>Small improvements by Nathan Bonnemains</p>
+                 <p>Fixed:</p>
+                 <ul>
+                     <li>Cancel button for "Open File Dialog"</li>
+@@ -78,7 +72,7 @@
+         </release>
+         <release version="1.0.2" date="2018-11-01">
+             <description>
+-                Fix for flatpak
++                <p>Fix for flatpak</p>
+             </description>
+         </release>
+         <release version="1.0.1" date="2018-11-01">
+@@ -100,7 +94,7 @@
+         </release>
+         <release version="0.2.0" date="2018-07-24">
+             <description>
+-                Prepare for JUNO
++                <p>Prepare for JUNO</p>
+             </description>
+         </release>
+         <release version="0.1.7" date="2018-03-25">
+@@ -164,37 +158,9 @@
+         </release>
+         <release version="0.1.0" date="2018-02-15">
+             <description>
+-                Initial Release
++                <p>Initial Release</p>
+             </description>
+         </release>
+     </releases>
+-    <content_rating type="oars-1.1">
+-        <content_attribute id="violence-cartoon">none</content_attribute>
+-        <content_attribute id="violence-fantasy">none</content_attribute>
+-        <content_attribute id="violence-realistic">none</content_attribute>
+-        <content_attribute id="violence-bloodshed">none</content_attribute>
+-        <content_attribute id="violence-sexual">none</content_attribute>
+-        <content_attribute id="violence-desecration">none</content_attribute>
+-        <content_attribute id="violence-slavery">none</content_attribute>
+-        <content_attribute id="violence-worship">none</content_attribute>
+-        <content_attribute id="drugs-alcohol">none</content_attribute>
+-        <content_attribute id="drugs-narcotics">none</content_attribute>
+-        <content_attribute id="drugs-tobacco">none</content_attribute>
+-        <content_attribute id="sex-nudity">none</content_attribute>
+-        <content_attribute id="sex-themes">none</content_attribute>
+-        <content_attribute id="sex-homosexuality">none</content_attribute>
+-        <content_attribute id="sex-prostitution">none</content_attribute>
+-        <content_attribute id="sex-adultery">none</content_attribute>
+-        <content_attribute id="sex-appearance">none</content_attribute>
+-        <content_attribute id="language-profanity">none</content_attribute>
+-        <content_attribute id="language-humor">none</content_attribute>
+-        <content_attribute id="language-discrimination">none</content_attribute>
+-        <content_attribute id="social-chat">none</content_attribute>
+-        <content_attribute id="social-info">none</content_attribute>
+-        <content_attribute id="social-audio">none</content_attribute>
+-        <content_attribute id="social-location">none</content_attribute>
+-        <content_attribute id="social-contacts">none</content_attribute>
+-        <content_attribute id="money-purchasing">none</content_attribute>
+-        <content_attribute id="money-gambling">none</content_attribute>
+-    </content_rating>
++    <content_rating type="oars-1.1" />
+ </component>
+--
+libgit2 1.7.2
 
